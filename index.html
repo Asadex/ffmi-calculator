@@ -15,35 +15,38 @@
     <title>FFMI Calculator</title>
 </head>
 <body>
-    <header>
-        <h1>Fat Free Mass Index Calculator</h1>
-    </header>
-    
     <main id="container">
-        
         <div id="form">
+            <img src="favicon.ico" id="big-logo" alt="logo">
+            <h1>Fat Free Mass Index Calculator</h1>
         <div class="information">
             <label>
-                Height 
+                <p>Height : </p> 
                 <input type="text" name="" id="">
+                <legend>Ex : 182 cm / 6 foot</legend>
             </label>
         </div>
         
         <div class="information">
             <label>
-                Weight 
+                <p>Weight : </p> 
                 <input type="text" name="" id="">
+                <legend>Ex : 69 kg / 150 lb</legend>
             </label>
         </div>
 
         <div class="information">
             <label>
-                Body Fat 
+                <p>Body Fat :</p>
                 <input type="text" name="" id="">
+                <legend>Ex : 12 %</legend>
             </label>
         </div>
 
-        <input type="submit" value="Calculate">
+        <div id="buttons-container">
+        <i class="fas fa-question-circle fa-3x question" ></i>
+        <input type="submit" id="calculate" value="Calculate">
+        </div>
 
         </div>
 

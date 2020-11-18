@@ -1,24 +1,47 @@
-/*RESETS*/
+/*RESETS and GENERAL STUFF*/
 *{
     box-sizing: border-box;
     margin:0;
     padding:0;
     font-family: "Montserrat", sans-serif ;
     font-weight:300;
+    color: white;
 }
 
 body{
     min-height:100vh;
-    background: linear-gradient(-30deg, rgb(201, 201, 201),rgb(255, 255, 255));
+    background: black;;
 }
 
 h1{
     font-family: "Montserrat";
-    font-weight: 200;
+    font-weight: 500;
     font-size:3rem;
+    color: rgb(0, 0, 0);
+    margin: 2rem 0;
+}
+label p{
     color: black;
-    text-align: center;
-    margin: 2rem;
+    font-weight: 500
+}
+
+input{
+    padding:.4rem .6rem;
+    color:black;
+    margin:10px 0;
+    margin-bottom: 5px;
+    transition: 0.4s linear;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+input:focus{
+    border: 1px solid red
+}
+
+legend{
+    color: grey;
+    font-size: .8rem;
 }
 
 /*FORM*/
@@ -28,13 +51,20 @@ h1{
     position: relative;
 }
 #form{
-    background: linear-gradient(50deg,white,rgb(219, 219, 219));
+    
+    background: linear-gradient(-265deg, white,rgb(182, 182, 182));
     position: relative;
-    padding: 2rem 3rem;
+    padding: 2.5rem ;
     border-radius: 10px;;
     
     z-index: 2;
 }
+#big-logo{
+    margin:auto;
+    width:65px;
+    text-align: center;
+}
+
 .information{
     margin: 1rem 0;
 }
@@ -50,22 +80,49 @@ h1{
     z-index: -5;
     padding: 2rem;
     background-color: grey;
-    box-shadow: rgb(201, 201, 201) 2px 10px 15px;
     border-radius: 11px;
     transition: 0.4s linear;
 }
+#calculate{
+    background: linear-gradient(to right,rgb(156, 1, 1),rgb(131, 0, 0)) ;
+    cursor: pointer;
+    padding: .7rem 1.4rem;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    transition: 0.4s linear
+}
 
+.question{
+    color: black;
+    cursor: pointer;
+    transition:  color 0.4s linear;
+    float:left;
+}
+.question:hover{
+    color:red;
+}
 
-
+#calculate:hover{
+    background:linear-gradient(to left ,rgb(204, 4, 4),rgb(175, 21, 21))
+}
+#buttons-container{
+    display:flex;
+    justify-content: space-between;
+    margin: 2rem 0 ;
+}
 
 /*FOOTER*/
 footer{
-    color: rgb(14, 14, 14);
-    margin:2rem;
+    color: rgb(255, 255, 255);
+    margin:3rem;
     text-align: center;
     position: relative;
     transition: 0.4s linear;
     top:0;
+}
+footer p{
+    color: white;
 }
 
 #business{
@@ -74,16 +131,27 @@ footer{
 
 
 /*RESPONSIVENESS*/
+@media screen and (min-width:1300px){
+    #container{
+        max-width: 45%
+    }
+}
 @media screen and (max-width:1025px){
     #container{
-        max-width: 65%
+        max-width: 70%
+    }
+    h1{
+        font-size: 2.3rem;
+        padding:0;
     }
 }
 @media screen and (max-width:650px){
     h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
+        padding:0;
     }
     #container{
-        max-width:90%
+        max-width:90%;
+        padding:0rem;
     }
 }
