@@ -1,0 +1,89 @@
+/*RESETS*/
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: "Montserrat", sans-serif ;
+    font-weight:300;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(-30deg, rgb(201, 201, 201),rgb(255, 255, 255));
+}
+
+h1{
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size:3rem;
+    color: black;
+    text-align: center;
+    margin: 2rem;
+}
+
+/*FORM*/
+#container{
+    max-width: 50%;
+    margin:5rem auto;
+    position: relative;
+}
+#form{
+    background: linear-gradient(50deg,white,rgb(219, 219, 219));
+    position: relative;
+    padding: 2rem 3rem;
+    border-radius: 10px;;
+    
+    z-index: 2;
+}
+.information{
+    margin: 1rem 0;
+}
+
+
+/*RESULTS*/
+#results{
+    width:100%;
+    margin:auto;
+    min-height: 100%;
+    position: absolute;
+    top:0;
+    z-index: -5;
+    padding: 2rem;
+    background-color: grey;
+    box-shadow: rgb(201, 201, 201) 2px 10px 15px;
+    border-radius: 11px;
+    transition: 0.4s linear;
+}
+
+
+
+
+/*FOOTER*/
+footer{
+    color: rgb(14, 14, 14);
+    margin:2rem;
+    text-align: center;
+    position: relative;
+    transition: 0.4s linear;
+    top:0;
+}
+
+#business{
+    color: rgb(236, 0, 51);
+}
+
+
+/*RESPONSIVENESS*/
+@media screen and (max-width:1025px){
+    #container{
+        max-width: 65%
+    }
+}
+@media screen and (max-width:650px){
+    h1{
+        font-size: 2.5rem;
+    }
+    #container{
+        max-width:90%
+    }
+}
