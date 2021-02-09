@@ -3,63 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet">
+    <script src="fontawesome.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>FFMI Calculator</title>
 </head>
 <body>
-    <main id="container">
-        <div id="form">
-            <img src="favicon.ico" id="big-logo" alt="logo">
-            <h1>Fat Free Mass Index Calculator</h1>
-        <div class="information">
-            <label>
-                <p>Height : </p> 
-                <input type="text" name="" id="">
-                <legend>Ex : 182 cm / 6 foot</legend>
-            </label>
+    <main>
+        <header class="header">
+        <div id='header-container'>
+        <h1>FFMI Calculator <br>(Fat Free Mass Index)</h1>
+        <div id='calculator'>
+            <div id="calculator-input" class="calculator-block">
+                <p class='calculator-title'>Input data</p>
+                <div class= "calculator-sublock">
+                    <label for="height">Height </label>
+                    <div class= calculator-sublock-input>
+                        <input dir='rtl' type="text" name="" maxlength="3" minlength="3" id="height">
+                        <select name="height-units" id="height-units">
+                            <option value="cm">cm</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </div>
+                <div class= "calculator-sublock">
+                    <div><label for="weight">Weight </label></div>
+                    <div class= calculator-sublock-input>
+                        <input dir='rtl' type="text" maxlength="3" name="" id="weight">
+                        <select name="weight-units" id="weight-units">
+                            <option value="kg">kg</option>
+                            <option value="lb">lb</option>
+                        </select>
+                    </div>
+                </div>
+                <div class= "calculator-sublock">
+                    <label for="fat">Body Fat</label>
+                    <div class= calculator-sublock-input>
+                        <input dir='rtl' type="text" name=" "maxlength="4" id="fat">
+                        <select name="body-fat" id="fat-units" disabled>
+                            <option value="cm">%</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="calculator-output" class="calculator-block">
+                <p class='calculator-title'>Results</p>
+                <div class= "calculator-sublock">
+                    <label for="height">FFMI </label>
+                    <div class= calculator-sublock-input>
+                        <input dir='rtl' type="text" name="" maxlength="3" minlength="3" id="height">
+                        <select name="height-units" id="height-units">
+                            <option value="cm">cm</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </div>
+                <div class= "calculator-sublock">
+                    <div><label for="weight">Normalized FFMI </label></div>
+                    <div class= calculator-sublock-input>
+                        <input dir='rtl' type="text" maxlength="3" name="" id="weight">
+                        <select name="weight-units" id="weight-units">
+                            <option value="kg">kg</option>
+                            <option value="lb">lb</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class= "calculator-sublock">
+                    <label for="fat">Fat-free Mass</label>
+                    <div class= calculator-sublock-input>
+                        <input dir='rtl' type="text" name=" "maxlength="4" id="fat">
+                        <select name="body-fat" id="fat-units" disabled>
+                            <option value="cm">%</option>
+                        </select>
+                    </div>
+                </div>
+                <div class= "calculator-sublock">
+                    <label for="height">Total body fat </label>
+                    <div class= calculator-sublock-input>
+                        <input dir='rtl' type="text" name="" maxlength="3" minlength="3" id="height">
+                        <select name="height-units" id="height-units">
+                            <option value="cm">cm</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button id="reset"  class="calculator-block"><i class="fal fa-undo fa-lg"></i></button>
+        </div>
+        <p>By <b>Artur Malisevych</b></p>
+        <p>Last updated: Jan 17, 2021</p>
+        <br>
+        <h2 id="table-of-contents">Table of contents</h2>
+        <ul>
+            <li><a href="#ffmi">FFMI - Fat-Free Mass Index</a></li>
+            <li><a href="#bmi-ffmi">BMI vs FFMI</a></li>
+            <li><a href="#pros-ffmi">Why is FFMi better than BMI</a></li>
+            <li><a href="#ffmi-scale">Fat-Free Mass scale</a></li>
+            <li><a href="#how-calculated">How is FFMI calculated</a></li>
+            <li><a href="">How to use it properly</a></li>
+        </ul>
         </div>
         
-        <div class="information">
-            <label>
-                <p>Weight : </p> 
-                <input type="text" name="" id="">
-                <legend>Ex : 69 kg / 150 lb</legend>
-            </label>
-        </div>
-
-        <div class="information">
-            <label>
-                <p>Body Fat :</p>
-                <input type="text" name="" id="">
-                <legend>Ex : 12 %</legend>
-            </label>
-        </div>
-
-        <div id="buttons-container">
-        <i class="fas fa-question-circle fa-3x question" ></i>
-        <input type="submit" id="calculate" value="Calculate">
-        </div>
-
-        </div>
-
-        <div id="results">
-            <p>sdf</p>
-        </div>
-       
+        </header>
+        <section id='ffmi' class="wrapper">
+            <div class="container">
+                <div class='sub-container'>
+                <h2>FFMI - Fat Free Mass Index</h2>
+                <br>
+                <p>
+                    This <strong>FFMI calculator</strong> is dedicated to estimating <strong>Fat-Free Mass Index of your body</strong>. 
+                </p>
+                <br>
+                <p>This method is more precise in comparison to the <a href="#bmi" >BMI</a> (Body Mass Index) and overcomes its shortcomings when dealing with people who are well trained, as well as professional sportsmen.</p>
+                <br>
+                <p>In the article below you can find an explanation of what is FFMI, the comparison of BMI vs FFMI, and the FFMI scale which allows you to classify your results.</p>
+                <br>
+                <p>
+                    <strong>FFMI</strong> is the abbreviation of <strong>Fat-Free Mass Index</strong>. It describes the amount of your muscle mass in relation to height and weight. FFMI is part of the family of body indexes, together with well-known and similar BMI. 
+                </p>
+                <br>
+                <p>
+                    Although the FFMI is less used, it is more precise than BMI, and also provides information about somebody's condition and health.
+                </p>
+                <br>
+                <p><strong>The Fat-Free Mass Index uses 3 inputs to provide a score of muscle mass:</strong></p>
+                <ul>
+                    <li>Body height - measured in centimeters or in feet and inches.</li>
+                    <li>Body weight - measured in kilograms or pounds.</li>
+                    <li>Body fat - measured in percent units (use our body fat calculator to find your input value).</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <section id='bmi-ffmi' class="wrapper">
+            <div class="container">
+                <div class='sub-container'>
+                <h2>BMI vs FFMI</h2>
+                <br>
+                <p>
+                    Body Mass Index is a parameter calculated from your weight and height. 
+                </p>
+                <br>
+                <p>
+                    The results are classified according to the defined norms, and thanks to that you can say whether your weight is ideal, normal or if you are overweight or even obese.
+                </p>
+                <br>
+                <p>
+                    <strong>However, this method has its limitations, the most significant being that it doesn't take into account the weight of your lean muscle mass, and your amount of body fat.</strong>
+                </p>
+                <br>
+                <p>
+                    Maybe, at first glance, it doesn't seem that big a problem, but the critics of BMI are justified. For example, two people with different heights and weights can have the same BMI, even though they have different amounts of both fat and muscle.
+                </p>
+                <br>
+                <p>
+                    Somebody with a lot of muscle mass can be classified negatively - as overweight or even obese.
+                </p>
+                <br>
+                <p>
+                    The BMI method is based only on weight, and therefore it doesn't take into account the difference in tissues and body type.
+                </p>
+                <br>
+                <p>
+                    From another point of view, an inactive person, someone who does not exercise and is in an overall unhealthy state, might get a very good BMI result.
+                </p>
+                <br>
+                </div>
+            </div>
+        </section >
+        <section id="pros-ffmi" class="wrapper">
+            <div class="container">
+                <div class='sub-container'>
+                    <h2>Why is FFMI better than BMI?</h2>
+                    <br>
+                    <p>
+                        When somebody gains weight, and it is caused by fat tissue increase, that means the person has become less healthy. When an athlete (or fitness enthusiast) put on weight because of an increase in muscle mass, it is a good thing. Both situations mean the same from BMI's viewpoint - weight increase results in BMI index increase. That is where the Fat-Free Mass Index comes in with a solution.
+                    </p>
+                    <br>
+                    <p>
+                        <strong>FFMI is defined in a way that allows distinguishing between fat gain and muscle gain</strong>. If the mass of fat increases, FFMI index goes down, and if the mass of muscle increases, FFMI rises.
+                    </p>
+                    <br>
+                    <p>
+                        It is this difference that allows FFMI to correctly estimate somebody's body and health condition. On the other hand, Body Mass index (BMI) is a general estimation of your health that works well for most of the population.
+                    </p>
+                    <br>
+                    <p>
+                        Note, that for somebody who exercises daily or trains professionally, BMI is mostly useless. For that kind of person, with more muscle mass than the ordinary people, Fat-Free Mass Index is a much better, much more effective choice.
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </section>
+        <section id='ffmi-scale' class="wrapper">
+            <div class="container">
+                <div class='sub-container'>
+                    <h2>Fat Free Mass Scale</h2>
+                    <br>
+                    <p>The following table indicates the classification of FFMI indexes.</p>
+                    <table>
+                        <thead>
+                            <th>FFMI range</th>
+                            <th>Description</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>below 18</td>
+                                <td>Below average</td>
+                            </tr>
+                            <tr>
+                                <td>18-20</td>
+                                <td>Average</td>
+                            </tr>
+                            <tr>
+                                <td>20-22</td>
+                                <td>Above average</td>
+                            </tr>
+                            <tr>
+                                <td>22-23</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>23-26</td>
+                                <td>Superior</td>
+                            </tr>
+                            <tr>
+                                <td>26-28</td>
+                                <td>Suspicion of steroid use</td>
+                            </tr>
+                            <tr>
+                                <td>above 28</td>
+                                <td>Steroid usage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Note that:</strong></p>
+                    <ul>
+                        <li>scores of FFMI between 26-27.9 may indicate usage of steroids, but still might be attainable naturally.</li>
+                        <li>scores of FFMI between 28-30 are highly unlikely to be achieved naturally without steroid usage.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="how-calculated" class="wrapper">
+            <div class="container">
+                <div class='sub-container'>
+                    <h2>How to calculate FFMI?</h2>
+                    <br>
+                    <p>The FFMI calculator uses currently approved mathematical formulas for computing the fat-free mass, FFMI as well as Normalized FFMI . The latter is dedicated for taller athletes who are bigger overall.</p>
+                    <br>
+                    <p>Fat free mass is estimates using the following method: <br><mark>Fat Free Mass = weight [kg] * (1 - (Body Fat [%] / 100))</mark>. Result is also expressed in kilograms [kg].</p>
+                    <br>
+                    <p>
+                        FFMI is calculated respectively: <br> <mark>FFMI = fat free mass [kg]/ (height [m])²</mark>. Expressed in kilograms per square meter [kg/m²].
+                    </p>
+                    <br>
+                    <p>
+                        For Normalized FFMI use the equation: <br> <mark>Normalized FFMI = FFMI [kg/m²] + 6.1 * (1.8 - height [m])</mark>. The same unit as in FFMI [kg/m²].
+                    </p>
+                    <br>
+                    <p>Fat-Free Mass Index calculator allows you to change the units which are displayed. You can switch between cm, m, kg, lb... accordingly to your needs and preferences.                    </p>
+                </div>
+            </div>
+        </section>
     </main>
     
-    
+    <footer>
 
-    <footer id="footer">
-        <p>Powered by <span id="business">Mystic Muscle Mass</span></p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
