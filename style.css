@@ -24,7 +24,7 @@ table{
     border: 1px solid #f1f1f1
 }
 table tbody tr:nth-of-type(odd){
-    background: white;
+    background: #f8f8f8;
     border-bottom: 1px solid #f1f1f1
 }
 table tr td{
@@ -36,17 +36,19 @@ table tr td{
     justify-content: center;
 }
 
-.wrapper:nth-of-type(odd){
+.wrapper:nth-of-type(even){
     background: white
 }
-.wrapper:nth-of-type(even){
+.wrapper:nth-of-type(odd){
     background: #f8f8f8
 }
 .container{
     width: 100%;
-    max-width:1800px;
+    max-width:1600px;
     padding: 4rem 3rem 4.2rem 3rem;
+    
 }
+
 a{
     text-decoration: none;
     color: rgb(60, 167, 113);
@@ -70,11 +72,13 @@ h1{
     margin: 2rem 0;
     margin-bottom: 3.5rem;
     font-weight: 800;
+    color: rgb(51, 51, 51)
 }
 h2{
     font-size: 1.8rem;
     line-height: 1.8;
-    font-weight: 800
+    font-weight: 800;
+    color: rgb(58, 58, 58)
 }
 ul{
     list-style-type: circle;
@@ -83,7 +87,7 @@ ul{
     margin-bottom: 1rem;
 }
 li{
-    color:  rgb(60, 167, 113);
+    color:  rgb(17, 155, 118);
 }
 
 #calculator{
@@ -95,7 +99,7 @@ li{
     width:100%;
 }
 .calculator-title{
-    background-color: rgb(60, 136, 111);
+    background-color: rgb(16, 143, 109);
     width: 100%;
     padding: 1rem;
     font-weight: 300;
@@ -109,12 +113,12 @@ li{
     margin: 1rem 0 1.5rem 0;
     border: 0;
     border-radius: .4rem;
-    background-color: rgb(60, 167, 113);
+    background-color: rgb(17, 167, 126);
     box-shadow: 0px 10px 10px rgba(0,0,0,0.15);
 }
 #calculator-input,#calculator-output{
     margin: 1.5rem 0;
-    background-color: rgb(60, 167, 113);
+    background-color: rgb(24, 195, 150);
     border-radius: .3rem;
     box-shadow: 0px 10px 10px rgba(0,0,0,0.08)
 }
@@ -192,20 +196,20 @@ mark{
         margin-bottom: 1rem
     }
     header{
-        background: linear-gradient(109deg, rgb(5, 141, 73),rgb(4, 102, 86) 30rem, #fff 10px );
+        background: linear-gradient(109deg, rgb(19, 134, 103) ,rgb(9, 85, 65) 30rem, #fff 10px );
         display: flex;
         justify-content: center;
         padding-top: 5rem;
         padding-bottom: 4.9rem;
-    }
+    } 
     #header-container{
         max-width: 70%;
         margin-left: 35rem;
     }
-    .wrapper:nth-of-type(odd){
+    .wrapper:nth-of-type(even){
         background: linear-gradient(to right, #f8f8f8 33%, white 0%);
     }
-    .wrapper:nth-of-type(even){
+    .wrapper:nth-of-type(odd){
         background: linear-gradient(to left,#f8f8f8 67%, white 0%);
     }
     #calculator{
@@ -213,6 +217,7 @@ mark{
         top: 4.8rem;
         left: 5rem;
         width: 40%;
+        transition: 0.1s linear
     }
     #table-of-contents{
         margin-top: 1.8rem;
@@ -236,10 +241,86 @@ mark{
         left: 10%;
     }
     header{
-        background: linear-gradient(109deg, rgb(5, 141, 73),rgb(4, 102, 86) 50rem, #fff 10px );
-        
+        background: linear-gradient(109deg, rgb(19, 134, 103) ,rgb(9, 85, 65) 50rem, #fff 10px );
     }
     #height,#weight,#fat{
         font-size: 1.3rem;
     }
+}
+
+.fa-facebook-f,.fa-twitter,.fa-youtube{
+    cursor: pointer;
+}
+.fa-facebook-f{
+    border-radius: 2rem;
+    color: rgb(29, 29, 100);
+    border: 3px solid rgb(29, 29, 100);
+    padding: .6rem .85rem;
+    font-size: 1.5rem;
+}
+.fa-twitter{
+    border-radius: 2rem;
+    color: rgb(28, 192, 192);
+    border: 3px solid rgb(28, 192, 192);
+    padding: .6rem .6rem;
+    font-size: 1.5rem;
+}
+.fa-youtube{
+    border-radius: 2rem;
+    color: rgb(212, 0, 0);
+    border: 3px solid rgb(212, 0, 0);
+    padding: .6rem .6rem;
+    font-size: 1.5rem;
+}
+.button{
+    padding: 1.2rem 2.2rem;
+    background-color:rgb(17, 167, 126);
+    border-radius: 2rem;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer div.container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+
+.no-style-list{
+    list-style-type: none;
+    margin-left: -1.4rem;
+    font-size: 1.2rem
+}
+.fab{
+    margin-right: 1rem;
+}
+#icons,#links{
+    margin: 5rem 0;
+}
+ul.no-style-list a{
+    text-decoration: none;
+}
+@media screen and (min-width: 1000px){
+    footer div.container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    #links{
+        width:45%
+    }
+    #links-group{
+        display: flex;
+        justify-content: space-between;
+    }
+    #links-groups div{
+        margin-right: 1.5rem;
+    }
+   
 }
