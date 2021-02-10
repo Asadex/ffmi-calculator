@@ -293,20 +293,6 @@ mark{
     font-size: 1.2rem;
     cursor: pointer;
 }
-@media screen and (max-width: 400px){
-    .button{
-        font-size: .95rem;
-    }
-}
-footer{
-    display: flex;
-    justify-content: center;
-}
-footer div.container{
-    display: flex;
-    flex-flow: column wrap;
-}
-
 
 
 .no-style-list{
@@ -318,10 +304,26 @@ footer div.container{
     margin-right: 1rem;
 }
 #icons,#links{
-    margin: 5rem 0;
+    margin: 4rem 0;
 }
 ul.no-style-list a{
     text-decoration: none;
+}
+@media screen and (max-width: 400px){
+    .button{
+        font-size: .95rem;
+    }
+    #icons,#links{
+        margin: 3rem 0;
+    }
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer div.container{
+    display: flex;
+    flex-flow: column wrap;
 }
 @media screen and (min-width: 1000px){
     footer div.container{
