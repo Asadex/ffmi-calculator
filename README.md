@@ -1,7 +1,7 @@
 # Fat-Free-Mass-Index-Calculator
 FFMI Calculator
 
-This is my version of FFMI calculator: https://www.asadex.github.io/ffmi-calculator 
+This is my version of FFMI calculator: https://asadex.github.io/ffmi-calculator/
 
 The site that I liked
 was this one: https://www.omnicalculator.com/health/ffmi
