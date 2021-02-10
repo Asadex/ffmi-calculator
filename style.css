@@ -102,7 +102,7 @@ li{
     background-color: rgb(16, 143, 109);
     width: 100%;
     padding: 1rem;
-    font-weight: 600;
+    font-weight: 00;
     font-size: 1.1rem;
     color: white;
 }
@@ -247,7 +247,22 @@ mark{
         font-size: 1.3rem;
     }
 }
-
+@media screen and (min-width: 3000px){
+    header{
+        background: linear-gradient(109deg, rgb(19, 134, 103) ,rgb(9, 85, 65) 70rem, #fff 10px );
+    }
+    #calculator{
+        left: 12%;
+    }
+}
+@media screen and (min-width: 4000px){
+    header{
+        background: linear-gradient(109deg, rgb(19, 134, 103) ,rgb(9, 85, 65) 90rem, #fff 10px );
+    }
+    #calculator{
+        left: 22%;
+    }
+}
 .fa-facebook-f,.fa-twitter,.fa-youtube{
     cursor: pointer;
 }
