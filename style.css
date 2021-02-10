@@ -316,6 +316,9 @@ ul.no-style-list a{
     #icons,#links{
         margin: 3rem 0;
     }
+    .no-style-list{
+        font-size: .95rem
+    }
 }
 footer{
     display: flex;
