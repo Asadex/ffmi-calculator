@@ -25,7 +25,7 @@
                 <div class= "calculator-sublock">
                     <label for="height">Height </label>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" name="height" maxlength="3" minlength="3" id="height">
+                        <input dir='rtl' type="text" name="height" maxlength="4" minlength="3" id="height">
                         <select name="height-units" id="height-units">
                             <option value="cm">cm</option>
                             <option value="ft">ft</option>
@@ -57,8 +57,8 @@
                 <div class= "calculator-sublock">
                     <label for="height">FFMI </label>
                     <div class= calculator-sublock-input>
-                        <span></span>
-                        <select name="weight-units" id="weight-units">
+                        <span id="ffmi"></span>
+                        <select name="weight-units" id="ffmi-units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
                         </select><span>/ m<sup>2</sup></span>
@@ -67,8 +67,8 @@
                 <div class= "calculator-sublock">
                     <div><label for="weight">Normalized FFMI </label></div>
                     <div class= calculator-sublock-input>
-                        <span></span>
-                        <select name="weight-units" id="weight-units">
+                        <span id="nffmi"></span>
+                        <select name="weight-units" id="nffmi-units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
                         </select></select><span>/ m<sup>2</sup></span>
@@ -77,8 +77,8 @@
                 <div class= "calculator-sublock">
                     <label for="fat">Fat-free Mass</label>
                     <div class= calculator-sublock-input>
-                        <span></span>
-                        <select name="weight-units" id="weight-units">
+                        <span id="ffm"></span>
+                        <select name="weight-units" id="ffm-units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
                         </select>
@@ -87,8 +87,8 @@
                 <div class= "calculator-sublock">
                     <label for="height">Total body fat </label>
                     <div class= calculator-sublock-input>
-                        <span></span>
-                        <select name="weight-units" id="weight-units">
+                        <span id="bf"></span>
+                        <select name="weight-units" id="bf-units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
                         </select>

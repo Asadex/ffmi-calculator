@@ -138,7 +138,8 @@ li{
     max-width: 70%;
 }
 
-#fat-units,#height-units, #weight-units{
+#fat-units,#height-units, #weight-units,#ffmi-units
+,#nffmi-units,#ffm-units,#bf-units{
     text-decoration: underline;
     cursor: pointer;
     appearance: none;
