@@ -25,7 +25,7 @@
                 <div class= "calculator-sublock">
                     <label for="height">Height </label>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" name="" maxlength="3" minlength="3" id="height">
+                        <input dir='rtl' type="text" name="height" maxlength="3" minlength="3" id="height">
                         <select name="height-units" id="height-units">
                             <option value="cm">cm</option>
                             <option value="ft">ft</option>
@@ -35,7 +35,7 @@
                 <div class= "calculator-sublock">
                     <div><label for="weight">Weight </label></div>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" maxlength="3" name="" id="weight">
+                        <input dir='rtl' type="text" maxlength="3" name="weight" id="weight">
                         <select name="weight-units" id="weight-units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
@@ -45,7 +45,7 @@
                 <div class= "calculator-sublock">
                     <label for="fat">Body Fat</label>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" name=" "maxlength="4" id="fat">
+                        <input dir='rtl' type="text" name="fat" maxlength="4" id="fat">
                         <select name="body-fat" id="fat-units" disabled>
                             <option value="cm">%</option>
                         </select>
@@ -57,40 +57,40 @@
                 <div class= "calculator-sublock">
                     <label for="height">FFMI </label>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" name="" maxlength="3" minlength="3" id="height">
-                        <select name="height-units" id="height-units">
-                            <option value="cm">cm</option>
-                            <option value="ft">ft</option>
-                        </select>
+                        <span></span>
+                        <select name="weight-units" id="weight-units">
+                            <option value="kg">kg</option>
+                            <option value="lb">lb</option>
+                        </select><span>/ m<sup>2</sup></span>
                     </div>
                 </div>
                 <div class= "calculator-sublock">
                     <div><label for="weight">Normalized FFMI </label></div>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" maxlength="3" name="" id="weight">
+                        <span></span>
                         <select name="weight-units" id="weight-units">
                             <option value="kg">kg</option>
                             <option value="lb">lb</option>
-                        </select>
-
+                        </select></select><span>/ m<sup>2</sup></span>
                     </div>
                 </div>
                 <div class= "calculator-sublock">
                     <label for="fat">Fat-free Mass</label>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" name=" "maxlength="4" id="fat">
-                        <select name="body-fat" id="fat-units" disabled>
-                            <option value="cm">%</option>
+                        <span></span>
+                        <select name="weight-units" id="weight-units">
+                            <option value="kg">kg</option>
+                            <option value="lb">lb</option>
                         </select>
                     </div>
                 </div>
                 <div class= "calculator-sublock">
                     <label for="height">Total body fat </label>
                     <div class= calculator-sublock-input>
-                        <input dir='rtl' type="text" name="" maxlength="3" minlength="3" id="height">
-                        <select name="height-units" id="height-units">
-                            <option value="cm">cm</option>
-                            <option value="ft">ft</option>
+                        <span></span>
+                        <select name="weight-units" id="weight-units">
+                            <option value="kg">kg</option>
+                            <option value="lb">lb</option>
                         </select>
                     </div>
                 </div>
@@ -214,8 +214,10 @@
                     <p>The following table indicates the classification of FFMI indexes.</p>
                     <table>
                         <thead>
-                            <th>FFMI range</th>
-                            <th>Description</th>
+                            <tr>
+                                <td>FFMI range</td>
+                                <td>Description</td>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
@@ -296,18 +298,18 @@
                 <div id='links-group'>
                     <div>
                         <ul class='no-style-list'>
-                            <a href=""><li>About Us</li></a>
-                            <a href=""><li>Blog</li></a>
-                            <a href=""><li>Contact</li></a>
-                            <a href=""><li>We're Hiring!</li></a>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">We're hiring!</a></li>
                         </ul>
                     </div>
                     <div>
                         <ul class="no-style-list">
-                            <a href=""><li>All calculators</li></a>
-                            <a href=""><li>Calculator collection</li></a>
-                            <a href=""><li>Partnership</li></a>
-                            <a href=""><li>Press kit</li></a>
+                            <li><a href="">All calculators</a></li>
+                            <li><a href="">Calculator collection</a></li>
+                            <li><a href="">Partnership</a></li>
+                            <li><a href="">Press kit</a></li>
                         </ul>
                     </div>
                 </div>
