@@ -158,3 +158,16 @@ function changeToKg(lb){
 }
 
 /////////////////////////////////////////////////
+
+//RESET BUTTON
+const RESET = document.getElementById('reset');
+
+RESET.onclick = () => resetInput();
+
+function resetInput(){
+  HEIGHT.value = '';
+  WEIGHT.value = '';
+  FAT.value = '';
+  HEIGHT_UNITS.value = 'cm';
+  WEIGHT_UNITS.value = 'kg';
+}
