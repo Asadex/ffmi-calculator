@@ -170,4 +170,5 @@ function resetInput(){
   FAT.value = '';
   HEIGHT_UNITS.value = 'cm';
   WEIGHT_UNITS.value = 'kg';
+  calculate();
 }
