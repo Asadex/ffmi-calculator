@@ -37,10 +37,10 @@ table tr td{
 }
 
 .wrapper:nth-of-type(odd){
-    background: white
+    background: #f8f8f8
 }
 .wrapper:nth-of-type(even){
-    background: #f8f8f8
+    background: white
 }
 .container{
     width: 100%;

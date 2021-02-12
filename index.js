@@ -52,26 +52,33 @@ BF_UNITS.onchange = () => calculate();
 
 //Calculate function
 function calculate(){
-  if(validateHeight() && validateWeight() && validateFat()){
+  if(validateHeight() && validateWeight() && validateFat(FAT.value)){
     FFM.textContent = calculateFfm();
     BF.textContent = calculateBf();
     FFMI.textContent = calculateFfmi();
     NFFMI.textContent = calculateNffmi();
   }
+  else{
+    FFM.textContent = '';
+    BF.textContent = '';
+    FFMI.textContent = '';
+    NFFMI.textContent = '';
+  }
 }
-
 
 // Validations
 function validateHeight(){
-  return true
+  return (HEIGHT_UNITS.value === 'cm' && HEIGHT.value > 121.92 && HEIGHT.value < 304.8) ? (/^(\d{3})$/).test(HEIGHT.value) :
+         (HEIGHT_UNITS.value === 'ft' && HEIGHT.value > 4 && HEIGHT.value < 10) ? (/^(\d{1}\.(\d\d?))$/).test(HEIGHT.value) : false
 }
 
 function validateWeight(){
-  return true
+  return (WEIGHT_UNITS.value === 'kg' && WEIGHT.value > 38 && WEIGHT.value < 500) ? (/^(\d{2}\d?|\d{2}\.\d|\d{3}\.\d)$/).test(WEIGHT.value) :
+         (WEIGHT_UNITS.value === 'lb' && WEIGHT.value > 85 && WEIGHT.value < 1102.3) ? true : false
 }
 
-function validateFat(){
-  return true
+function validateFat(fat){
+  return (fat > 2 && fat <= 50) 
 }
 
 
@@ -112,6 +119,10 @@ function calculateFfmi(){
 
   if (height_units === 'cm')
      height = height / 100;
+  else{
+    height = HEIGHT.value.match(/^(\d\.\d\d?)$/g)[0].split('.');
+    height = ((height[0] * 30.48 + height[1] * 2.54) / 100).toFixed(2);
+  }
   
   ffmi = (ffm / (height * height)).toFixed(2);
   return (FFMI_UNITS.value === 'kg') ? (+ffmi).toFixed(1) : changeToLb(ffmi).toFixed(1);
@@ -126,6 +137,10 @@ function calculateNffmi(){
 
   if (height_units === 'cm')
      height = height / 100;
+  else{
+    height = HEIGHT.value.match(/^(\d\.\d\d?)$/g)[0].split('.');
+    height = ((height[0] * 30.48 + height[1] * 2.54) / 100).toFixed(2);
+  }
   
   nffmi = +(ffmi + (6.1 * (1.8 - height)));
   return (NFFMI_UNITS.value === 'kg') ? nffmi.toFixed(1) : changeToLb(nffmi).toFixed(1);
