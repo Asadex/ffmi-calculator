@@ -251,7 +251,7 @@ mark{
     header{
         background: linear-gradient(109deg, rgb(19, 134, 103) ,rgb(9, 85, 65) 50rem, #fff 10px );
     }
-    #height,#weight,#fat,#ffmi,#nffmi,#bf,#fmi{
+    #height,#weight,#fat,#ffmi,#nffmi,#bf,#ffm{
         font-size: 1.3rem;
     }
 }
